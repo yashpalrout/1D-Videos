@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNMEY 1D song videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>One direction Video Songs</h1>
+        <div class="row">
+            <div class="col">
+                <div class ="feature-img">
+
+                    <img src="videos/drag4.png" width="100%">
+                    <img src="videos/play10.png" class="playBTN" onclick="playVideo('videos/DragMeDown.mp4')" >
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-image-row">
+                    <div class="small-image">
+                        <img src="videos/hist.png" width="100%">
+                        <img src="videos/play10.png" class="playBTN"  onclick="playVideo('videos/history.mp4')" >
+                    </div>
+                    <p>HISTORY</p>
+                </div>
+
+                <div class="small-image-row">
+                    <div class="small-image">
+                        <img src="videos/night.jpg" width="100%">
+                        <img src="videos/play10.png" class="playBTN"  onclick="playVideo('videos/nightChanges.mp4')" >
+                    </div>
+                    <p>NIGHT CHANGES</p>
+                </div>
+
+                <div class="small-image-row">
+                    <div class="small-image">
+                        <img src="videos/what.jpg" width="100%">
+                        <img src="videos/play10.png" class="playBTN"  onclick="playVideo('videos/WhatMakesYou.mp4')" >
+                    </div>
+                    <p>WHAT MAKES YOU BEAUTIFUL</p>
+                </div>
+
+                <div class="small-image-row">
+                    <div class="small-image">
+                        <img src="videos/one.png" width="100%">
+                        <img src="videos/play10.png" class="playBTN"   onclick="playVideo('videos/oneWayOrAnother.mp4')">
+                    </div>
+                    <p>ONE WAY OR ANOTHER</p>
+                </div>
+
+                <div class="small-image-row">
+                    <div class="small-image">
+                        <img src="videos/story.jpg" width="100%">
+                        <img src="videos/play10.png" class="playBTN" onclick="playVideo('videos/storyOfMyLife.mp4')">
+                    </div>
+                    <p>STORY OF MY LIFE</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="videoPlayer" id="VideoPlayer">
+        <video width="100%" controls autoplay id="MyVideo">
+            <source src="videos/DragMeDown.mp4" type="video/mp4">
+        </video>
+        <img src="videos/cross3.png" class="close-btn" onclick="stopVideo()">
+
+     
+    </div>
+
+    <script>
+        var VideoPlayer = document.getElementById("VideoPlayer");
+        var MyVideo = document.getElementById("MyVideo");
+
+        function stopVideo() {
+
+            VideoPlayer.style.display = "none";
+            MyVideo.pause(); 
+        }
+        function playVideo(file){
+            MyVideo.src = file;
+            VideoPlayer.style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+</html>
